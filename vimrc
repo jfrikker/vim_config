@@ -12,6 +12,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'nonius/cargo.vim'
 Plugin 'rust-lang/rust.vim'
 
 " The following are examples of different formats supported.
@@ -20,6 +21,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/syntastic'
 
 Plugin 'https://github.com/leafgarland/typescript-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,6 +69,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_rust_checkers = ['cargo']
+
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 augroup BufferOptions
   au BufNewFile,BufRead *.py set nocin
