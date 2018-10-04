@@ -1,3 +1,5 @@
 #! /bin/sh
-ln -s ~/.vimrc ~/.vim_config/vimrc
-ln -s ~/.gvimrc ~/.vim_config/gvimrc
+ln -s ~/.vim_config/vimrc ~/.vimrc
+ln -s ~/.vim_config/gvimrc ~/.gvimrc 
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
