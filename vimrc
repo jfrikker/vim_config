@@ -20,7 +20,9 @@ Plugin 'rust-lang/rust.vim'
 " plugin on GitHub repo
 Plugin 'scrooloose/syntastic'
 
+Plugin 'airblade/vim-gitgutter'
 Plugin 'https://github.com/leafgarland/typescript-vim'
+" Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 
@@ -73,6 +75,9 @@ let g:syntastic_rust_checkers = ['cargo']
 
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+set background=dark
+let g:indent_guides_enable_on_vim_startup = 1
 
 augroup BufferOptions
   au BufNewFile,BufRead *.py set nocin
